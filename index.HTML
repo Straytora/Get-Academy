@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 150px 10fr 50px;
+            grid-template-areas: 'header header' 
+                                 'menu mainContent'
+                                 'footer footer';
+        }
+
+        div.header {
+            background-color: aqua;
+            grid-area: header;
+            text-align: center;
+            padding: 30px;
+        }
+
+        div.menu {
+            background-color: aquamarine;
+            grid-area: menu;
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+
+        div.mainContent {
+            background-color: blanchedalmond;
+            grid-area: mainContent;
+
+        }
+
+        div.footer {
+            background-color: lightgrey;
+            grid-area: footer;
+            text-align: right;
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 20px 1fr 4fr 20px;
+                grid-template-areas: 'header' 
+                                     'menu'
+                                     'mainContent'
+                                     'footer';
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header"><h1>My Website</h1></div>
+        <div class="menu"><h3>Navigation</h3>
+            <ul>
+            <a href="url">link text</a>
+            <a href="url">link text</a>
+            <a href="url">link text</a>
+            </ul>
+        </div>
+        <div class="mainContent">Homepage</div>
+        <div class="footer">Footer (C) 2019</div>
+    </div>
+</body>
+</html>
